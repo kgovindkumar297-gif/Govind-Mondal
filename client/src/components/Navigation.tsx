@@ -3,6 +3,7 @@ import { Link } from 'react-scroll';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import logoImg from '@/assets/logo.png';
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,7 +34,8 @@ export function Navigation() {
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <Link to="hero" smooth={true} duration={500} className="cursor-pointer">
+        <Link to="hero" smooth={true} duration={500} className="cursor-pointer flex items-center gap-2">
+          <img src={logoImg} alt="Logo" className="w-8 h-8 rounded-full" />
           <h1 className="text-2xl font-bold font-display tracking-tight text-white">
             Govind <span className="text-primary">Dev</span>
           </h1>

@@ -5,9 +5,10 @@ import { FloatingActions } from '@/components/FloatingActions';
 import { SectionHeader } from '@/components/SectionHeader';
 import { ServiceCard } from '@/components/ServiceCard';
 import { ProjectCard } from '@/components/ProjectCard';
-import { ContactForm } from '@/components/ContactForm';
 import { useProjects, useServices, useSkills } from '@/hooks/use-portfolio';
 import { Button } from '@/components/ui/button';
+import { ContactForm } from '@/components/ContactForm';
+import logoImg from '@/assets/logo.png';
 
 export default function Portfolio() {
   const { data: services } = useServices();
@@ -76,10 +77,9 @@ export default function Portfolio() {
               className="relative w-72 h-72 md:w-96 md:h-96 mx-auto"
             >
               <div className="absolute inset-0 bg-gradient-to-tr from-primary to-purple-600 rounded-full blur-2xl opacity-20 animate-pulse" />
-              {/* Unsplash placeholder for profile - Man coding or professional portrait */}
-              {/* man in suit professional portrait dark background */}
+              {/* Profile Image from assets */}
               <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=800&fit=crop&crop=faces"
+                src={logoImg}
                 alt="Govind Kumar"
                 className="relative w-full h-full object-cover rounded-full border-4 border-card shadow-2xl"
               />
